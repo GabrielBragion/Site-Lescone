@@ -1,0 +1,47 @@
+body{
+  background-color: $cor-fundo;
+  border: 10px solid $cor-detalhes;
+  color: $cor-primaria;
+  @include device(small-device){
+    border: none;
+  }
+}
+img{
+  display: block;
+  max-width: 100%;
+}
+p{
+  @include font-tipo-1(18);
+}
+
+/* Barra Scroll */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: $cor-fundo;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $cor-secundaria;
+}
+
+.titulo{
+  @include font-tipo-1(18);
+  text-transform: uppercase;
+  @include device(small-device){
+    margin-bottom: 40px;
+  }
+  &::after{
+    content: "";
+    display: block;
+    width: 70%;
+    float: right;
+    height: 2px;
+    background-color: $cor-primaria;
+    margin-top: 13px;
+    @include device(medium-device){
+      width: 60%;
+    }
+  }
+}

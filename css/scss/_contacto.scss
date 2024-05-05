@@ -1,0 +1,67 @@
+.contacto{
+  margin-block: 120px;
+  @include device(small-device){
+    margin-block: 60px;
+  }
+  form{
+    label{
+      @include font-tipo-1(18);
+      display: block;
+    }
+    input[type='text'], textarea{
+      @include font-tipo-1(18);
+      color: $cor-primaria;
+      width: 100%;
+      padding: 0 5px;
+      height: 40px;
+      border: 2px solid $cor-secundaria;
+      background-color: transparent;
+      margin-bottom: 1em;
+      &:hover,&:focus{
+        outline: none;
+        border-color: $cor-detalhes;
+      }
+    }
+    textarea{
+      height: 120px;
+      resize: none;
+    }
+  }
+}
+
+input.button{
+  @include font-tipo-1(18);
+  cursor: pointer;
+  color: $cor-secundaria;
+  text-transform: uppercase;
+  border: 2px solid $cor-secundaria;
+  background-color: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  box-shadow: 5px 5px 0 -2px $cor-detalhes ,5px 5px 0 0 $cor-secundaria;
+  transition: .3s;
+  &:hover{
+    box-shadow: 3px 3px 0 -2px $cor-detalhes ,3px 3px 0 0 $cor-secundaria;
+  }
+}
+
+.contacto-info{
+  color: $cor-secundaria;
+  margin-block: 50px;
+  @include device(large-device){
+    float: right;
+    text-align: right;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+}
+
+.contacto-mapa{
+    display: block;
+    box-shadow: 0 0 0 10px $cor-detalhes;
+    clear: both;
+    img{
+      width: 100%;
+    }
+}

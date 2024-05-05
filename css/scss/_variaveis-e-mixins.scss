@@ -1,0 +1,47 @@
+// Cores
+
+$cor-fundo: #edece4; //bege claro
+$cor-primaria: #2a2426; //cinze escuro
+$cor-secundaria: #988c77; //bege medio
+$cor-detalhes: #cbc6b9; //bege medio
+$cor-sucesso: green; //verde
+$cor-erro: red; // vermelho
+
+
+// Fontes
+@font-face {
+  font-family: "Aref";
+  src: url("/fonts/Aref_Ruqaa/ArefRuqaa-Regular.ttf");
+}
+@font-face {
+  font-family: "PT Mono";
+  src: url("/fonts/PT_Mono/PTMono-Regular.ttf");
+}
+
+$font-principal: "PT Mono", monospace;
+$font-secundaria: "Aref", serif;
+
+// função que retorna pixel em em
+@function em($pixel, $contexto: 16){
+  @return calc($pixel / $contexto) + em;
+}
+
+@mixin font-tipo-1($size){
+  font-family: $font-principal;
+  @if $size == 18{
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+}
+
+@mixin font-tipo-2($size){
+  font-family: $font-secundaria;
+  @if $size == 18{
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+  @else if $size == 24{
+    font-size: em(24);
+    line-height: em(30,24);
+  }
+}

@@ -1,0 +1,22 @@
+footer{
+  background-color: $cor-primaria;
+  padding: 20px 0;
+  box-shadow: 0 0 0 10px $cor-primaria;
+  p{
+   color: $cor-detalhes;
+   @include device(small-device){
+    text-align: center;
+   }
+  }
+  div{
+    display: flex;
+    justify-content: space-between;
+    @include device(small-device){
+      flex-direction: column;
+      align-items: center;
+      a{
+        margin-top: 1rem;
+      }
+    }
+  }
+}
